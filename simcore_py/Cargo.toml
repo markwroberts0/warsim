@@ -1,0 +1,22 @@
+[package]
+name = "simcore_py"
+version = "0.1.0"
+edition = "2021"
+description = "Python bindings for the simcore simulation model"
+license = "MIT"
+
+[lib]
+name = "simcore_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+simcore = { path = "../simcore" }
+pyo3 = { version = "0.20.0", features = ["extension-module", "abi3-py310"] }
+numpy = "0.20.0"
+
+[build-dependencies]
+pyo3-build-config = "0.20.0"
+
+[package.metadata.maturin]
+name = "simcore"
+python-source = "python"

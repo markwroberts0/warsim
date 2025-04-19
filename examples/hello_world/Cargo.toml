@@ -1,0 +1,9 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+description = "Simple example using the simcore engine"
+license = "MIT"
+
+[dependencies]
+simcore = { path = "../../simcore" }

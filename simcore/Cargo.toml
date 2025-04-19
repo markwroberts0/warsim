@@ -1,0 +1,22 @@
+[package]
+name = "simcore"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust-based mission/campaign simulation model core"
+license = "MIT"
+
+[dependencies]
+# ECS (Entity Component System) - using bevy_ecs for component storage
+bevy_ecs = "0.13.0"
+bevy_math = "0.13.0"
+
+# For physics in later iterations
+rapier3d = { version = "0.18.0", optional = true }
+
+# For parallel computation in later iterations
+rayon = { version = "1.8.0", optional = true }
+
+[features]
+default = []
+physics = ["rapier3d"]
+parallel = ["rayon"]
