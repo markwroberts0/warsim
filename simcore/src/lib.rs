@@ -16,6 +16,12 @@ pub struct Simulation {
     current_time: f64,
 }
 
+impl Default for Simulation {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Simulation {
     pub fn new() -> Self {
         let mut world = World::new();
